@@ -1,0 +1,33 @@
+/* Vital */
+.calendar ul {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.calendar {
+	text-align: center;
+}
+.calendar li {
+	padding: 0.5em;
+}
+
+/* Styling the calendar */
+.calendar ul:first-of-type:not(:only-of-type) {
+	font-weight: bold;
+	background: hsl(var(--s), 50%);
+}
+
+.calendar .LastMonth,
+.calendar .NextMonth {
+	opacity: 50%;
+}
+
+.calendar li{
+	background-color: hsl(var(--p),10%);
+}
+
+.calendar li.Today{
+	background-color:var(--sec);
+}

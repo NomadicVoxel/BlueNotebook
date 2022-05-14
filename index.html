@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./favicon.png" type="image/png" />
+		<title>BlueNotebook</title>
+
+		<style>
+			@import url(CSS/Skltl.OneFile.css);
+			@import url(CSS/config.css);
+			@import url(CSS/Calendar.css);
+
+			.FlexRow {
+				width: 100%;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-evenly;
+				align-items: stretch;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<i>
+				<label for="DrawerToggle"> ≡ </label>
+			</i>
+			<span id="title"> BlueNotebook </span>
+		</header>
+
+		<input type="checkbox" id="DrawerToggle" class="HideButton" />
+		<nav class="Hide">insert menu here</nav>
+
+		<aside>
+			<div class="calendar">
+				<output class="today">[insert today's date]</output>
+				<ul>
+					<li>S</li>
+					<li>M</li>
+					<li>T</li>
+					<li>W</li>
+					<li>T</li>
+					<li>F</li>
+					<li>S</li>
+				</ul>
+				<ul>
+					<li>[insert blank calendar]</li>
+				</ul>
+			</div>
+		</aside>
+
+		<main>
+			<h2>insert date here</h2>
+			<textarea name="NotePage" id="NotePage">Tell your tale.</textarea>
+		</main>
+
+		<footer class="FlexRow">
+			<div>wordcount</div>
+			<div>date</div>
+			<div>time</div>
+		</footer>
+
+		<script type="module" src="JS/Main.js"></script>
+	</body>
+</html>
