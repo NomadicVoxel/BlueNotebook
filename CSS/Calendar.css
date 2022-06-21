@@ -1,33 +1,28 @@
-/* Vital */
-.calendar ul {
-	display: grid;
-	grid-template-columns: repeat(7, 1fr);
-	list-style: none;
+#calendar {
 	margin: 0;
 	padding: 0;
-}
-.calendar {
 	text-align: center;
+	font-family: var(--mono);
 }
-.calendar li {
+#calendar td, #calendar th {
 	padding: 0.5em;
 }
 
 /* Styling the calendar */
-.calendar ul:first-of-type:not(:only-of-type) {
+#calendar th {
 	font-weight: bold;
 	background: hsl(var(--s), 50%);
 }
 
-.calendar .LastMonth,
-.calendar .NextMonth {
-	opacity: 50%;
-}
-
-.calendar li{
+#calendar td {
 	background-color: hsl(var(--p),10%);
 }
 
-.calendar li.Today{
+#calendar .LastMonth,
+#calendar .NextMonth {
+	opacity: 50%;
+}
+
+#calendar td.Today{
 	background-color:var(--sec);
 }
