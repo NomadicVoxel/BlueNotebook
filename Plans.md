@@ -1,5 +1,9 @@
-# Things to do later
+# Components
 
+- UI
+  - Better buttons
+  - Better editor
 - Save button
 - Load button
-- Better looking editor
+- Export tool
+- Markdown

@@ -1,35 +1,41 @@
+import * as DTS from "./DateToString.JS";
+
 export function Generate(date) {
-	// Clear the calendar
+	// Convert input to date object, in case it wasn't one...
+	let WorkingDate = new Date(date);
+	let Today = new Date();
+
+	// Display working date on page.
+	document.querySelector("output.WorkingDate").innerText = DTS.GetVerboseDate(WorkingDate);
+
 	const DateList = document.querySelector(".calendar ul:last-of-type");
 	DateList.innerHTML = "";
-	// Then find the starting date
-	let WorkingDate = new Date(date);
-	WorkingDate.setDate(1);
-	WorkingDate.setDate(-WorkingDate.getDay() - 7);
 
-	// We're going to want to label which month the date is associated with.
-	let whichMonth = "LastMonth";
-	// We'll generate 7 weeks, including a whole week of the previous and next month at least.
-	for (let i = 0; i < 49; i++) {
+	// Find the starting date. The first day of the week before the start of the month.
+	let DateIndex = WorkingDate; 
+	DateIndex.setDate( 1 -6 -DateIndex.getDay() );
+
+	// Before starting the loop to populate the calendar, we'll be tracking which month with this tag. (CSS needs this.)
+	let WhichMonth = "LastMonth";
+	for (let counter = 0; counter < 49; counter++){
+		// Create cell
 		let cell = document.createElement('li');
-		cell.innerText = WorkingDate.getDate();
-		WorkingDate.setDate(WorkingDate.getDate() + 1);
-		// Highlight this month
-		if (WorkingDate.getDate() == 1) {
-			console.log("Looking at " + WorkingDate.getDate());
-			if (whichMonth == "LastMonth") {
-				console.log("Transitioning to ThisMonth.");
-				whichMonth = "ThisMonth";
-			} else {
-				console.log("Transitioning to NextMonth");
-				whichMonth = "NextMonth";
+		cell.innerText = DateIndex.getDate();
+		// label this month.
+		if(DateIndex.getDate()==1){
+			if(WhichMonth == "LastMonth") { 
+				WhichMonth = "ThisMonth";
+			} else{
+				WhichMonth = "NextMonth";
 			}
 		}
-		cell.classList.add(whichMonth);
-		// Color today's tile
-		if ((WorkingDate.getDate() === new Date().getDate()) & (whichMonth == "ThisMonth")) {
+		cell.classList.add(WhichMonth);
+		// Label today
+		if ((WorkingDate.getDate() === new Date().getDate()) & (WhichMonth == "ThisMonth")){
 			cell.classList.add("Today");
 		}
 		DateList.appendChild(cell);
+		// increment date
+		DateIndex.setDate(DateIndex.getDate() +1);
 	}
 }
