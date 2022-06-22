@@ -24,5 +24,6 @@
 }
 
 #calendar td.Today{
-	background-color:var(--sec);
+	background: hsl(var(--s), 50%);
+	border-radius:2em;
 }
