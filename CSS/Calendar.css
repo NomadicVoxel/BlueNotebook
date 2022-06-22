@@ -14,10 +14,6 @@
 	background: hsl(var(--s), 50%);
 }
 
-#calendar td {
-	background-color: hsl(var(--p),10%);
-}
-
 #calendar .LastMonth,
 #calendar .NextMonth {
 	opacity: 50%;
