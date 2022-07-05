@@ -1,14 +1,11 @@
-import * as DateToString from "./DateToString.JS";
+import * as DTS from "./DateToString.JS";
 import * as Calendar from "./Calendar.JS";
 
 let Today = new Date();
-let WorkingFile = Today;
+let WorkingFile = DTS.GetVerboseDate(Today);
 
-function init(WorkingFile){
-	if(WorkingFile.type != "string"){
-		Calendar.Generate(WorkingFile.toISOString());
-	} else{Calendar.Generate(Today);}
-
+function init(date){
+	Calendar.Generate(date);
 }
 
 init(WorkingFile);
