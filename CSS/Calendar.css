@@ -20,5 +20,9 @@
 
 #calendar td.Today{
 	background: hsl(var(--s), 50%);
-	border-radius:2em;
+}
+
+#calendar td.Active{
+	border: thin solid white;
+	box-sizing:border-box;
 }
