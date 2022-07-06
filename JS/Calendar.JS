@@ -26,6 +26,7 @@ export function Generate(date) {
 			// Create cell
 			let cell = document.createElement('td');
 			cell.innerText = DateIndex.getDate();
+			cell.dataset.datetime = DTS.GetVerboseDate(DateIndex);
 			// label this month.
 			if(DateIndex.getDate()==1){
 				if(WhichMonth == "LastMonth") { 
