@@ -37,7 +37,7 @@ export function Generate(date) {
 				}
 			}
 			cell.classList.add(WhichMonth);
-			// Label today
+			// Label today and WorkingDate
 			if (DTS.GetVerboseDate(DateIndex) == DTS.GetVerboseDate(Today)){
 				cell.classList.add("Today");
 			}
@@ -46,9 +46,7 @@ export function Generate(date) {
 			}
 
 			// Make PickDate button
-			cell.addEventListener("click", function(){
-				PickDate(cell.dataset.datetime);
-			});
+			cell.onclick = (event) => PickDate(event.target.dataset.datetime);
 			row.appendChild(cell);
 			// increment date
 			DateIndex.setDate(DateIndex.getDate() +1);
