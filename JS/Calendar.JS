@@ -1,4 +1,5 @@
 import * as DTS from "./DateToString.JS";
+
 export function Generate(date) {
 	// Convert input to date object, in case it wasn't one...
 	let WorkingDate = new Date(date);
@@ -13,7 +14,9 @@ export function Generate(date) {
 
 	// Find the starting date. The first day of the week before the start of the month.
 	let DateIndex = WorkingDate; 
-	DateIndex.setDate( 1 -(6 -DateIndex.getDay()) );
+	DateIndex.setDate(1);
+	DateIndex.setDate( 1 - DateIndex.getDay() );
+	console.log(DTS.GetVerboseDate(DateIndex));
 	
 	// Before starting the loop to populate the calendar, we'll be tracking which month with this tag. (CSS needs this.)
 	let WhichMonth = "LastMonth";
