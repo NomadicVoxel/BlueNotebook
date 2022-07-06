@@ -2,9 +2,15 @@
 	margin: auto;
 	text-align: center;
 	font-family: var(--mono);
+	border-collapse:collapse;
 }
 #calendar td, #calendar th {
 	padding: 0.5em;
+	border: 1px solid var(--back);
+}
+
+#calendar td {
+	cursor:pointer;
 }
 
 /* Styling the calendar */
