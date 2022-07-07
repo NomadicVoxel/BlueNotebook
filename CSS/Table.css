@@ -1,0 +1,16 @@
+Table {
+	margin: auto;
+	text-align: center;
+	font-family: var(--mono);
+	border-spacing:0;
+}
+
+td, th {
+	padding: 0.5em;
+	border: 1px solid var(--back);
+}
+
+th {
+	font-weight: bold;
+	background: hsl(var(--s), 50%);
+}
