@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="./favicon.png" type="image/png" />
+		<meta charset=UTF-8 />
+		<meta name=viewport content="width=device-width, initial-scale=1.0" />
+		<link rel=icon href=./favicon.png type=image/png />
 		<title>BlueNotebook</title>
 
 		<style>
 			@import url(CSS/Skltl.OneFile.css);
 			@import url(CSS/config.css);
+			@import url(CSS/Dialog.css);
 			@import url(CSS/Calendar.css);
 			@import url(CSS/inputs.css);
 			.FlexRow {
@@ -29,17 +30,19 @@
 	<body>
 		<header>
 			<i>
-				<label for="DrawerToggle"> ≡ </label>
+				<label for=DrawerToggle> ≡ </label>
 			</i>
-			<span id="title"> BlueNotebook </span>
+			<span id=title> BlueNotebook </span>
 		</header>
 
-		<input type="checkbox" id="DrawerToggle" class="HideButton" />
-		<nav class="Hide">insert menu here</nav>
+		<input type=checkbox id=DrawerToggle class=HideButton />
+		<nav class=Hide>
+			<a id=AboutButton >About</a>
+		</nav>
 
 		<aside>
-			<table id="calendar">
-				<caption id="WorkingDate"> [ insert working date here ]</caption>
+			<table id=calendar>
+				<caption id=WorkingDate> [ insert working date here ]</caption>
 				<thead>
 					<tr>
 						<th>S</th>
@@ -61,15 +64,19 @@
 
 		<main>
 			<h2>insert date here</h2>
-			<textarea name="Editor" id="Editor">Tell your tale.</textarea>
+			<textarea name=Editor id=Editor>Tell your tale.</textarea>
 		</main>
 
-		<footer class="FlexRow">
+		<dialog id=about>
+			test
+		</dialog>
+
+		<footer class=FlexRow>
 			<div>wordcount</div>
 			<div>date</div>
 			<div>time</div>
 		</footer>
 
-		<script type="module" src="JS/Main.js"></script>
+		<script type=module src=JS/Main.js></script>
 	</body>
 </html>
