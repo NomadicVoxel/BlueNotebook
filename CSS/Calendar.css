@@ -2,6 +2,7 @@
 	margin: auto;
 	text-align: center;
 	font-family: var(--mono);
+	border-spacing:0;
 }
 #calendar td, #calendar th {
 	padding: 0.5em;
