@@ -8,6 +8,7 @@ let WorkingFile = DTS.GetVerboseDate(Today);
 function init(date){
 	Calendar.Generate(date);
 	document.querySelector("a#AboutButton").onclick = Files.about;
+	document.querySelector("a#ExportButton").onclick = Files.exportPage;
 }
 
 init(WorkingFile);
