@@ -1,3 +1,6 @@
+/* This CSS was originally composed of several files broken into imports. Here it is compiled into one file instead. */ 
+/* Importing CSSModules/theme/theme.css*/
+/* Importing default_config.css*/
 /* Just copy/paste this file and edit the variables. */
 /* Fonts */
 :root {
@@ -37,10 +40,11 @@
 		--visited: var(--sec);
 	}
 }
+/* End of file default_config.css*/
 
 
 /* General */
-:root {
+:root{
 	background-color: var(--back);
 	color: var(--fore);
 }
@@ -100,12 +104,19 @@ footer {
 	font-size: 0.75rem;
 	font-family: var(--mono);
 	background-color: hsla(var(--p), 10%);
-}
+}/* End of file theme.css*/
 
+
+/* Importing CSSModules/layout/layout.css*/
+/* Importing Blocks/Blocks.css*/
+/* Importing Header.css*/
 header {
 	font-size: 2rem;
 	padding: var(--pad);
-}
+}/* End of file Header.css*/
+
+
+/* Importing Aside.css*/
 aside {
 	min-width: 10em;
 	padding: var(--pad);
@@ -113,19 +124,31 @@ aside {
 }
 aside nav a {
 	display: block;
-}
+}/* End of file Aside.css*/
+
+
+/* Importing Main.css*/
 main,
 article {
 	max-width: 40em;
 	width:100%;
 	margin-left: auto;
 	margin-right: auto;
-}
+}/* End of file Main.css*/
+
+
+/* Importing Footer.css*/
 footer {
 	min-height: 3em;
 	padding: var(--pad);
 	text-align: center;
-}
+}/* End of file Footer.css*/
+
+
+/* End of file Blocks.css*/
+
+
+/* Importing layout.thin.css*/
 @media screen and (max-width:40em) {
 	body {
 		display: flex;
@@ -160,9 +183,9 @@ footer {
 	footer {
 		flex-shrink: 0;
 	}
-}
-@import url(Blocks/Blocks.css);
-@import url(layout.thin.css);
+}/* End of file layout.thin.css*/
+
+
 
 
 /* Grid definition */
@@ -204,7 +227,11 @@ footer {
 		grid-column: 1/-1;
 		grid-row: 4;
 	}
-}
+}/* End of file layout.css*/
+
+
+/* Importing CSSModules/Functionality/Functionality.css*/
+/* Importing Tab2Skip.css*/
 /* 
 Tab2Skip. Paste this to the beginning of the document if you want to use this.
 <a href="#" id="Tab2Skip">Skip to content</a> 
@@ -218,7 +245,10 @@ Tab2Skip. Paste this to the beginning of the document if you want to use this.
 }
 #Tab2Skip:focus {
 	top: 0;
-}
+}/* End of file Tab2Skip.css*/
+
+
+/* Importing DrawerHideToggle.css*/
 /* Toggle-hide button, now off by default on small screens. */
 @media screen and (max-width:40em) {
 	.HideButton:checked ~ .Hide,
@@ -231,7 +261,13 @@ Tab2Skip. Paste this to the beginning of the document if you want to use this.
 	.HideButton {
 		display: none;
 	}
-}
+}/* End of file DrawerHideToggle.css*/
+
+
+/* End of file Functionality.css*/
+
+
+/* Importing CSSModules/BugStomp.css*/
 html, body{
 	margin:0;
 	min-width: 100%;
@@ -248,13 +284,82 @@ i svg, span svg, p svg{
 	height: 1em;
 	position:relative;
 	top:.2em;
-}
+}/* End of file BugStomp.css*/
+
+
+/* Importing CSSModules/Elements/Elements.css*/
+/* Importing CustomElements.css*/
 code.tag:before{
 	content:"<";
 }
 code.tag:after{
 	content:">";
+}/* End of file CustomElements.css*/
+
+
+/* Importing Inputs.css*/
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	accent-color: var(--pri);
+	background: var(--bg);
+	border: 1px solid hsl(var(--fg), 50%);
+	color: var(--fg);
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
+
+input:not([type="checkbox"]),
+input:not([type="radio"]){
+	width : 150px;
+
+}/* End of file Inputs.css*/
+
+
+/* Importing Table.css*/
+Table {
+	margin: auto;
+	text-align: center;
+	font-family: var(--mono);
+	border-spacing:0;
+}
+
+td, th {
+	padding: 0.5em;
+	border: 1px solid var(--back);
+}
+
+th {
+	font-weight: bold;
+	background: hsl(var(--s), 50%);
+}/* End of file Table.css*/
+
+
+/* Importing Calendar.css*/
+#calendar td {
+	cursor:pointer;
+}
+
+#calendar .LastMonth,
+#calendar .NextMonth {
+	opacity: 50%;
+}
+
+#calendar td.Today{
+	background: hsl(var(--s), 50%);
+}
+
+#calendar td.Active{
+	border: thin solid white;
+	box-sizing:border-box;
+}/* End of file Calendar.css*/
+
+
+
 blockquote, figure, details {
 	padding-top: 20px 0;
 	width: 95%;
@@ -267,4 +372,9 @@ blockquote, figure, details {
 
 details summary, label{
 	cursor:pointer;
-}
+}/* End of file Elements.css*/
+
+
+/* End of file Skltl.css*/
+
+
